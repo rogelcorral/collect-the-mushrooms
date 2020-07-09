@@ -244,7 +244,7 @@ b b d d b c . . b b b b b b b .
 . . . . . . b b b c c c b . . . 
 `, SpriteKind.Object)
 rock.setPosition(130, 90)
-rock = sprites.create(img`
+let shrub = sprites.create(img`
 . . . . . . 6 6 6 6 . . . . . . 
 . . . . . c 6 7 7 6 c . . . . . 
 . . . . c 6 7 5 7 7 6 c . . . . 
@@ -262,7 +262,34 @@ c 6 c c 6 7 6 c c 6 7 6 c c 6 c
 . . 6 6 6 6 c 6 7 6 c 6 6 6 . . 
 . . . 6 6 c . 6 6 6 . c 6 . . . 
 `, SpriteKind.Object)
-rock.setPosition(77, 95)
+shrub.setPosition(77, 95)
+shrub = sprites.create(img`
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . b b b b . . . . . . . . . . 
+. . . . . . . . b b d d d d b b . . . . . . . . 
+. . . . . . . b d d b b b b d d b . . . . . . . 
+. . . . . . b d b b d d d d b b d b . . . . . . 
+. . . . . b d b b d b b b b d b b d b . . . . . 
+. . . . . b d b d b d d d d b d b d b . . . . . 
+. . . . . c d b b d b b b b d b b d c . . . . . 
+. . . . . c b d b b d d d d b b d b c . . . . . 
+. . . . . e f b d d b b b b d d b c e . . . . . 
+. . . . . e e f f b d d d d b c c e e . . . . . 
+. . . . . e e e e f f c c c c e e e . . . . . . 
+. . . . . c e e e e e e e e e e e e . . . . . . 
+. . . . . c e e e e e e e e e e e e . . . . . . 
+. . . . . f e e e e e e e e e e e e . . . . . . 
+. . . . . c c e e e e e e e e e e e . . . . . . 
+. . . . . . f e e e e e e e e e e e . . . . . . 
+. . . . . 6 f c e e e e e e e e e e 6 . . . . . 
+. . . . 6 7 7 6 e e e e e e e e e 6 7 6 . . . . 
+. . . 6 7 7 7 6 6 6 e e e e 6 6 6 6 7 7 6 . . . 
+. . 6 7 7 6 8 e 6 7 7 6 6 7 7 7 6 6 7 7 7 6 . . 
+. . . 6 6 8 e e 7 7 6 8 8 6 7 7 8 8 6 6 6 . . . 
+. . . . . . e e 7 7 e e e e 7 7 e c e e . . . . 
+. . . . . . e e 6 e e e e e e 6 e e f . . . . . 
+`, SpriteKind.Object)
+shrub.setPosition(11, 102)
 let mySprite = sprites.create(img`
 . . . . . . 5 . 5 . . . . . . . 
 . . . . . f 5 5 5 f f . . . . . 
@@ -285,7 +312,7 @@ controller.moveSprite(mySprite)
 mySprite.setFlag(SpriteFlag.StayInScreen, true)
 info.setScore(0)
 info.setLife(3)
-game.onUpdateInterval(5000, function () {
+game.onUpdateInterval(2000, function () {
     projectile = sprites.createProjectileFromSide(img`
 . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . b b b b b . . . . . . . . . . . . . . 
