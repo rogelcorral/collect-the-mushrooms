@@ -312,7 +312,7 @@ controller.moveSprite(mySprite)
 mySprite.setFlag(SpriteFlag.StayInScreen, true)
 info.setScore(0)
 info.setLife(3)
-game.onUpdateInterval(2000, function () {
+game.onUpdateInterval(1000, function () {
     projectile = sprites.createProjectileFromSide(img`
 . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . b b b b b . . . . . . . . . . . . . . 
